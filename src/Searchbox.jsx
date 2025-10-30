@@ -1,10 +1,9 @@
-const apiUrl = import.meta.env.VITE_API_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
-
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 export default function Searchbox({ updateInfo }) {
+  const apiUrl='http://api.weatherapi.com/v1/current.json';
+  const apiKey='cc9a2ca7728646d4bea90421251110';
   let [city, setCity] = useState("");
   let [error, setError] = useState(false);
   let getWeatherInfo = async () => {
